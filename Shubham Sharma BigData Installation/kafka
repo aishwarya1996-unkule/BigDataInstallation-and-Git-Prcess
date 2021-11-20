@@ -1,0 +1,15 @@
+Install Kafka on Linux
+
+step 1. Download Apache Kafka from kafka.apache.org.
+	https://www.apache.org/dyn/closer.cgi?path=/kafka/2.7.0/kafka_2.13-2.7.0.tgz
+
+step 2. Extract the files using "tar" tool like 7zip in $HOME directory.
+	tar xvf kafka_2.13-2.7.0.tgz
+
+step 3. In ~/.bashrc set KAFKA_HOME and PATH variable.
+	export KAFKA_HOME=$HOME/kafka_2.13-2.7.0
+	export PATH=$KAFKA_HOME/bin:$PATH
+
+step 4. In kafka_2.13-2.7.0\config\server.properties set log directory.
+	Uncomment line: listeners=PLAINTEXT://:9092
+	

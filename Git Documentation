@@ -1,0 +1,26 @@
+772 mkdir ~/dataeaze/
+cd dataeaze/ 
+git clone https://aishwaryaunkule@bitbucket.org/aishwaryaunkule/etl_framework.git
+  775  cd etl_framework/
+  776  git status
+  777  git checkout develop
+  778  git status
+  780  git checkout -b Aishwarya
+  781  git checkout Aishwarya 
+  782  git status
+  783  open README.md and add some thing in e.g. #Aishwarya Unkule and save it
+  784  git add README.md 
+  785  git commit -> file opened and write modified or anything as a comment and save -exit it
+  786  git status
+  787  git commit
+  788  git branch -v
+  789  git checkout develop
+  git remote add upstream https://aishwaryaunkule@bitbucket.org/dataeaze/etl_framework.git ->Goto daaeaze bitbucket clone option and copy the url
+  790  git pull upstream develop
+  791  git checkout Aishwarya 
+  792  git push origin Aishwarya 
+
+BitBucket Login: 
+pull request: then display changes automatically
+click on create pull request between aishwarya bit bucket Aishwarya branch and dataeaze Aishwarya branch or develop branch and Owner after checking code merge it with updated code  
+

@@ -1,0 +1,32 @@
+                                          Sqoop installation:
+                                          
+
+
+
+JAR:--
+
+https://mvnrepository.com/artifact/com.google.protobuf/protobuf-java/4.0.0-rc-2
+
+https://mvnrepository.com/artifact/com.google.protobuf/protobuf-java/3.11.4
+
+https://mvnrepository.com/artifact/org.json/json/20201115
+
+
+SQOOP:--
+
+
+#List...
+
+sqoop list-tables --connect jdbc:mysql://localhost:3306/test --username test --password test
+
+
+#Import...
+
+sqoop import --connect jdbc:mysql://localhost/test --username test --password test --table Friends -m 1 --target-dir /user/sunbeam/sqoop/Fri
+
+
+#Export...
+
+sqoop export --connect jdbc:mysql://localhost/test --username test --password test --table emp -m 1 --columns empno,ename,job,mgr,hire,sal,comm,deptno --input-null-non-string NULL --export-dir /user/sunbeam/emp/input
+
+

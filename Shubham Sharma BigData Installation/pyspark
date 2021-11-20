@@ -1,0 +1,47 @@
+
+1] 
+go to   /.profile
+
+export PYSPARK_PYTHON=python3
+export PYSPARK_DRIVER_PYTHON=python3
+export SPARK_HOME=$HOME/.local/lib/python3.8/site-packages/pyspark
+export PATH=$HOME/.local/bin:$PATH
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+terminal> pyspark
+	
+	Run todays Code
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2] 
+
+Install pycharm on ubuntu
+
+terminal >  sudo snap install pycharm-community --classic
+
+terminal >  pycharm-community
+
+or download from browser
+
+https://www.jetbrains.com/pycharm/download
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+PyCharm -> New Project
+
+
+• Create Python file (main.py)
+
+Copy paste below Code
+
+
+from pyspark import SparkConf
+from pyspark import SparkContext
+
+conf = SparkConf().setAppName("Demo01").setMaster("local")
+sc = SparkContext(conf=conf)
+file = sc.textFile("/home/pallavi/spark-3.1.2-bin-hadoop3.2/LICENSE")
+lines = file.map(lambda line: line.lower())
+words = lines.flatMap(lambda line: line.split())
+word1s = words.map(lambda word: (word,1))
+wordcounts = word1s.reduceByKey(lambda acc,cnt: acc + cnt)
+result = wordcounts.collect()
+print(result)
